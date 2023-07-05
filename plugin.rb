@@ -70,7 +70,7 @@ after_initialize do
     include_condition: -> { scope.user_is_a_member_of_group?(object) },
   ) { DiscourseDataExplorer::Query.for_group(object).exists? }
 
-  register_bookmarkable(DiscourseDataExplorer::QueryGroupBookmarkable)
+  # register_bookmarkable(DiscourseDataExplorer::QueryGroupBookmarkable)
 
   add_api_key_scope(
     :discourse_data_explorer,
